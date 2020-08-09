@@ -13,4 +13,3 @@ NodoC* newNodoC(int val){
     nuevo->val=val;
     return nuevo;
 }
-

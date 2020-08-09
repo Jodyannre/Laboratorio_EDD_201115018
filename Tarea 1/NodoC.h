@@ -14,3 +14,4 @@ void setIzquierda(NodoC* aux,NodoC* nuevo);
 void setDerecha(NodoC* aux,NodoC* nuevo); 
 
 
+

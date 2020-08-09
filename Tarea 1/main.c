@@ -11,6 +11,8 @@ int main(){
     add(l,a);
     add(l,b);
     add(l,c);
+    //eliminar(2,l);
+    //getNodo(2,l);
     imprimir(l);
     generar(l);
     Liberar(l);

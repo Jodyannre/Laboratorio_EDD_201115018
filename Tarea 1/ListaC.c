@@ -56,13 +56,13 @@ ListaC* nuevaLista(){
 }
 void generar(ListaC* l){
     FILE * fp;
-    fp=fopen("./cadigo.txt","w");
+    fp=fopen("./codigo.txt","w");
     if(fp==NULL){
         printf("Error");
         return;
     }
     char cad[1024];
-    sprintf(cad,"digraph G{ \n node[shape=\"box\"];\n");
+    sprintf(cad,"digraph G{ \n edge[arrowhead=vee];\n node[shape=Mdiamond, color=green, style=filled];\n");
     fputs(cad,fp);
     NodoC* aux;
     aux=l->head;
@@ -88,4 +88,50 @@ void guardarRecursivo(NodoC* aux,FILE* fp,char c[]){
             fputs(c,fp);
         }
     }
+}
+
+NodoC* getNodo(int posicion, ListaC* l){
+    NodoC* aux = l->head;
+    NodoC* error = newNodoC(-1000);
+    int pos = 0;
+    while (aux != NULL){
+        if (pos == posicion){
+            return aux;
+        }
+        else{
+            pos += 1;
+            aux = aux->derecha;
+        }
+    }
+    return error;   
+}
+
+void eliminar(int posicion, ListaC* l){
+    NodoC* actual = getNodo(posicion,l);
+    NodoC* izq = actual->izquierda;
+    NodoC* der = actual->derecha;
+
+    if (actual->val != -1000){
+        if (izq == NULL && der == NULL){  //Es el único
+            free(actual);
+        }
+        else if (izq == NULL){   //Es head
+            l->head = der;
+            der->izquierda = NULL;
+            free(actual);
+        }
+        else if (der == NULL){   //Es el último
+            izq->derecha = NULL;
+            free(actual);
+        }
+        else{
+            izq->derecha = der;
+            der->izquierda = izq;
+            free(actual);
+        }
+    }else{
+        printf("Posicion inexistente. \n");
+    }
+
+
 }

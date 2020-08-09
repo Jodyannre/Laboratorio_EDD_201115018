@@ -1,0 +1,11 @@
+digraph G{ 
+ edge[arrowhead=vee];
+ node[shape=Mdiamond, color=green, style=filled];
+node00000000005912c0[label="3"]
+node00000000005912a0[label="10"]
+node00000000005912e0[label="25"]
+node00000000005912a0->node00000000005912e0;
+ node00000000005912e0->node00000000005912a0;
+node00000000005912c0->node00000000005912a0;
+ node00000000005912a0->node00000000005912c0;
+}
