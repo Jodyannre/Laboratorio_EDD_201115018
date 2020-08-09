@@ -1,0 +1,17 @@
+--------------------Errores------------------------------
+1) Si el valor del nodo es -1000 y lo quiero eliminar me tira error que no existe el nodo.
+
+-------------------Recomendaciones----------------------
+2) Para manejar un dato inexistente se utiliza NULL para identificar que no existe. En este caso yo vi el codigo y me di cuenta que en ese caso iba a tronar.
+
+
+-------------------Nota-------------------------------
+
+Grafica 20/20
+Eliminar 30/40
+Get     30/40
+
+Total--------- 80
+
+
+

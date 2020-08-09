@@ -1,0 +1,5 @@
+digraph G{ 
+ edge[arrowhead=vee];
+ node[shape=Mdiamond, color=green, style=filled];
+node0x55c1f3432340[label="-1000"]
+}
