@@ -4,6 +4,8 @@
 using namespace std;
 
 int main(){
+    string nombre;
+    nombre = "hola mundo";
 
 
 
