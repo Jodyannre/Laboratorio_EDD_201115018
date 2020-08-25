@@ -1,5 +1,5 @@
-#ifndef MATRIZDIS_H
-#define MATRIZDIS_H
+#ifndef MATRIZ_H
+#define MATRIZ_H
 #include "NodoM.h"
 #include "NodoDM.h"
 #include "Cabecera.h"
@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class matrizDIS
+class matriz
 {
 private:
     Cabecera* x;
@@ -20,10 +20,10 @@ private:
     NodoM* getUltimoX(Cabecera* cabecera,int numero);
     NodoM* getUltimoY(Cabecera* cabecera,int numero);
 public:
-    matrizDIS();
+    matriz();
     void add(NodoDM* n);
     void codigo();
-    ~matrizDIS();
+    ~matriz();
 };
 
 

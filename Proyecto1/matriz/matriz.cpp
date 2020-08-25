@@ -1,16 +1,16 @@
-#include "matrizDIS.h"
+#include "matriz.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-matrizDIS::matrizDIS(/* args */)
+matriz::matriz(/* args */)
 {
     this->x = NULL;
     this->y = NULL;
 }
 
-Cabecera* matrizDIS::crearX(int n){
+Cabecera* matriz::crearX(int n){
     if(this->x == NULL){
         Cabecera* nuevo = new Cabecera(n);
         this->x = nuevo;
@@ -42,7 +42,7 @@ Cabecera* matrizDIS::crearX(int n){
     return nuevo;
 }
 
-Cabecera* matrizDIS::crearY(int n){
+Cabecera* matriz::crearY(int n){
     if(this->y == NULL){
         Cabecera* nuevo = new Cabecera(n);
         this->y = nuevo;
@@ -75,7 +75,7 @@ Cabecera* matrizDIS::crearY(int n){
 }
 
 
-NodoM* matrizDIS::getUltimoX(Cabecera* cabecera,int numero){
+NodoM* matriz::getUltimoX(Cabecera* cabecera,int numero){
     if (cabecera->getDerecha()==NULL){
         return cabecera;
     }
@@ -92,7 +92,7 @@ NodoM* matrizDIS::getUltimoX(Cabecera* cabecera,int numero){
     return aux;
 }
 
-NodoM* matrizDIS::getUltimoY(Cabecera* cabecera,int numero){
+NodoM* matriz::getUltimoY(Cabecera* cabecera,int numero){
     if (cabecera->getAbajo()==NULL){
         return cabecera;
     }
@@ -110,7 +110,7 @@ NodoM* matrizDIS::getUltimoY(Cabecera* cabecera,int numero){
 }
 
 
-Cabecera* matrizDIS::getCabeceraX(int n){
+Cabecera* matriz::getCabeceraX(int n){
     if(this->x == NULL){
         return NULL;
     }
@@ -124,7 +124,7 @@ Cabecera* matrizDIS::getCabeceraX(int n){
     return NULL;
 }
 
-Cabecera* matrizDIS::getCabeceraY(int n){
+Cabecera* matriz::getCabeceraY(int n){
     if(this->y == NULL){
         return NULL;
     }
@@ -138,7 +138,7 @@ Cabecera* matrizDIS::getCabeceraY(int n){
     return NULL;
 }
 
-matrizDIS::~matrizDIS()
+matriz::~matriz()
 {
     /*
         aux = Coordenadas en x
@@ -170,7 +170,7 @@ matrizDIS::~matrizDIS()
     }
 }
 
-void matrizDIS::add(NodoDM* n){
+void matriz::add(NodoDM* n){
     Cabecera* y = this->getCabeceraY(n->getPosY());
     Cabecera* x = this->getCabeceraX(n->getPosX());
     if (y== NULL){
