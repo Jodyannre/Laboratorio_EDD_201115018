@@ -1,0 +1,18 @@
+----------------Errores---------------------
+----------------Recomendacion--------------
+1) Dividir metodos publicos de privados, por ejemplo el recorrer no le interesa cuando estas agregando.
+puede ser privado.
+2) el metodo recorrer es bool pero no usas el valor que retorna, lo cual seria mejor void
+3) En el metodo destruir cuentas con varios if, esto se puede cambiar a else if y ya no le agregas el return
+4) Respecto a los else if del punto 3 es mejor solo validar un punto por ejemplo que tu metodo destruir
+solo valide si el actual == null {return } asi si el nodo es null que no haga naa
+y en tu metodo unicamente quedaria destruir el derecho, destruir el izquierdo y delete actual
+
+
+---------------Nota-----------------------
+
+
+Arbol     40/40
+Preorden  20/20
+Inorden   20/20
+Postorden 20/20
