@@ -8,7 +8,8 @@ using namespace std;
 
 int main(){
 
-    string cadenas[5] = {"hola","nos vemos","manana","por","la tarde"};
+    string cadenas[]={"Hola como estas","Yo bien gracias","ESTE ES UN MENSAJE","Vamos a ganar EDD todos juntos","!!!!Vamos a sacar 100","$$$$$$$$$#$$$$$","Este es el ultimo mensaje del dia de hoy*45"};
+    cout<<cadenas->size()<<endl;
     metodo* m = new metodo(cadenas);
     m->imprimirArray();
     m->quicksort();
