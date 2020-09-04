@@ -4,6 +4,10 @@
 #include <string>
 #include "proyecto.h"
 #include <stdbool.h>
+#include <fstream>
+#include "../generico/listaGenerica.h"
+#include <cstring>
+
 
 class avl
 {
@@ -14,11 +18,23 @@ private:
     proyecto* rotacionID(proyecto* n, proyecto* m);
     proyecto* rotacionDD(proyecto* n, proyecto* m);
     proyecto* rotacionDI(proyecto* n, proyecto* m);
-    void borrar(proyecto* raiz);
+    void imprimir(proyecto* padre, ofstream& file, bool primero);
+    int getId(string nombre);
+    int size;
+    listaGenerica<nProyecto>* getCopia(listaGenerica<nProyecto>* lista, proyecto* nodo);
 public:
     avl();
     void insertar(string nombre, int id);
+    void insertar(int id);
     proyecto* getRaiz();
+    void destruir(proyecto* raiz);
+    void setRaiz(proyecto* nuevo);
+    void preOrden(proyecto* actual, int contador);
+    void inOrden(proyecto* actual);
+    void postOrden(proyecto* actual);
+    void imprimir();
+    int getSize();
+    listaGenerica<nProyecto>* getCopia();
     ~avl();
 };
 

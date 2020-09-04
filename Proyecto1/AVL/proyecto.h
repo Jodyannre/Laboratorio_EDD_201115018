@@ -2,6 +2,11 @@
 #define PROYECTO_H
 #include <iostream>
 #include <string>
+#include <ctime>
+#include "listaM/pivote.h"
+#include "listaM/listaM.h"
+#include <bits/stdc++.h>
+#include <fstream>
 
 using namespace std;
 
@@ -13,16 +18,22 @@ private:
     proyecto* derecha;
     proyecto* izquierda;
     int factor;
-    //variable de tiempo
-    //Lista para las otras estructuras
+    string fecha;
+    listaM* dato;
+    void setNombre();
 
+    
+    //Lista para las otras estructuras
+    void setFecha();
 public:
-    proyecto(string nombre, int id);
+    proyecto(string nombre);
+    proyecto(int id);
     void setId(int i);
     void setDerecha(proyecto* d);
     void setIzquierda(proyecto* i);
     void setNombre(string n);
     void setFactor(int f);
+
     string getNombre();
     int getId();
     int getFactor();

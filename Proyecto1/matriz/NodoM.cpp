@@ -8,6 +8,8 @@ NodoM::NodoM(/*Sin Argumetos*/)
     this->abajo = NULL;
     this->izquierda = NULL;
     this->derecha = NULL;
+    this->posx = 0;
+    this->posy = 0;
 
 }
 
@@ -45,4 +47,11 @@ NodoM* NodoM::getIzquierda(){
 
 NodoM::~NodoM()
 {
+}
+
+int NodoM::getPosX(){
+    return this->posx;
+}
+int NodoM::getPosY(){
+    return this->posy;
 }

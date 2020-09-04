@@ -1,17 +1,21 @@
 #ifndef NODOM_H
 #define NODOM_H
-#include <iostream>;
+#include <iostream>
 
 using namespace std;
 
 
 class NodoM
 {
+
+protected:
+    int posx,posy;
 private:
     NodoM* arriba;
     NodoM* abajo;
     NodoM* izquierda;
     NodoM* derecha;
+
 public:
     NodoM(/* args */);
     void setArriba(NodoM* n);
@@ -22,6 +26,8 @@ public:
     NodoM* getAbajo();
     NodoM* getIzquierda();
     NodoM* getDerecha(); 
+    int getPosX();
+    int getPosY();
     ~NodoM();
 };
 

@@ -9,10 +9,23 @@ mueble::mueble(int id, string nombre, char letra, string color, int grado)
     this->letra = letra;
     this->color = color;
     this->grado = grado;
-    this->izquierda = NULL;
-    this->derecha = NULL;
+    this->coordenadas = new lista();
 }
 
+mueble::mueble(){
+    this->id = 0;
+    this->nombre = "";
+    this->letra = 'a';
+    this->color = "";
+    this->grado = 0; 
+    this->izquierda = NULL;
+    this->derecha = NULL;
+    this->coordenadas = new lista();
+}
+
+void mueble::setDato(int id){
+    this->id = id;
+}
 void mueble::setId(int id){
     this->id = id;
 }
@@ -40,6 +53,9 @@ void mueble::setFactor(int factor){
 int mueble::getId(){
     return this->id;
 }
+int mueble::getDato(){
+    return this->id;
+}
 string mueble::getNombre(){
     return this->nombre;
 }
@@ -52,14 +68,23 @@ string mueble::getColor(){
 int mueble::getGrado(){
     return this->grado;
 }
+void mueble::agregarCoordenada(int x, int y, int valor){
+    coordenada* nueva = new coordenada(x,y,valor);
+    this->coordenadas->add(nueva);
+}
+lista* mueble::getCoordenadas(){
+    return this->coordenadas;
+}
 mueble* mueble::getDerecha(){
     return this->derecha;
 }
 mueble* mueble::getIzquierda(){
     return this->izquierda;
 }
-int mueble::getFactor(){
-    return this->factor;
+
+void mueble::eliminarLista(){
+    this->coordenadas->destruirElementos(this->coordenadas->getPrimero());
+    delete this->coordenadas;
 }
 
 mueble::~mueble()

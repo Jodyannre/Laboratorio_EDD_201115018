@@ -8,15 +8,6 @@
             "args": [
                 "-g",
                 "${workspaceFolder}\\*.cpp",
-                "${workspaceFolder}\\ABB/*.cpp",
-                "${workspaceFolder}\\AVL/*.cpp",
-                "${workspaceFolder}\\lista/*.cpp",
-                "${workspaceFolder}\\libreria/*.cpp",
-                "${workspaceFolder}\\matriz/*.cpp",
-                "${workspaceFolder}\\AVL/listaM/*.cpp",
-                "${workspaceFolder}\\generico/nodos/*.cpp",
-                "${workspaceFolder}\\generico/*.cpp",
-                //"${workspaceFolder}\\main.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],

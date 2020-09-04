@@ -10,11 +10,16 @@ class Cabecera:public NodoM
 {
 private:
     int numero;
+    //int posx,posy;
 public:
     Cabecera(int n);
     void setNumero(int n);
     int getNumero();
     ~Cabecera();
+    void setPosX(int p);
+    void setPosY(int p);
+    //int getPosX();
+    //int getPosY();
 };
 
 

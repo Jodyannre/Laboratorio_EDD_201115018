@@ -1,6 +1,7 @@
 #ifndef NODODM_H
 #define NODODM_H
-#include "NodoM.h"
+#include "nodoM.h"
+#include "../libreria/mueble.h"
 #include <iostream>
 #include <string>
 
@@ -9,28 +10,26 @@ using namespace std;
 // Nodo datos matriz
 class NodoDM:public NodoM
 {
+    int contador = 0;
 private:
+    mueble* dato;
+    //int posx,posy;
+    int parte;
     int id;
-    string nombre;
-    char letra;
-    string color;
-    int posx,posy;
     //string puntos; <<<<<-------- Falta idear esto, pero creo que sera una lista enlazada
    
 public:
-    NodoDM(int i, string n, char l, string c);
-    void setNombre(string n);
-    void setLetra(char l);
-    void setColor(string c);
-    void setId(int i);
+    NodoDM(mueble* nuevo);
+    void setDato(mueble* nuevo);
     void setPosX(int p);
     void setPosY(int p);
-    string getNombre();
-    char getLetra();
-    string getColor();
+    void setId(int i);
+    void setParte(int i);
+    mueble* getDato();
+    //int getPosX();
+    //int getPosY();
+    int getParte();
     int getId();
-    int getPosX();
-    int getPosY();
     ~NodoDM();
 };
 
